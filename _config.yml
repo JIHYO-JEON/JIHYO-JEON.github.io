@@ -1,6 +1,6 @@
 # Jekyll Defaults
-title: blueface
-description: A small and simple site I made to test out Jekyll.
+title: jihyoyo blog
+description: Jr. Machine Learning Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 
 url: "https://jihyo-jeon.github.io/"

@@ -5,7 +5,7 @@ date: 2020-08-03 20:46:00
 tags: [ML Paper]
 ---
 
-![enter image description here](https://cdn.aitimes.kr/news/photo/201710/10791_10296_126.png)
+![](https://cdn.aitimes.kr/news/photo/201710/10791_10296_126.png)
 
 **More information:**
 - DeepMind blog post about WaveNet [WaveNet - DeepMind](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio)

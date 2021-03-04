@@ -25,8 +25,8 @@ Like this, we humans can process a large amount of information that an image has
 
 | Tasks | Computer | Human | 
 |--|--|--|
-| Calculating a lot of numbers | easy | takes long |
-| Understanding images | hard | easy |
+| Calculating a lot of numbers       | easy | takes long |
+| Understanding images               | hard | easy |
 
 The point is, human wants computers do works instead of us, not only just calculating numbers, but also understanding images. Because computer can work faster and longer than human.
 

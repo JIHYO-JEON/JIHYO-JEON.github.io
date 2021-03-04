@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Computer vs. Human"
+date: 2020-08-02 20:46:00
+tags: [neural networks]
+---
+
 # Very stupid computer
 
 In fact, computers are a kind of calculator. Computers can do math operations very quickly. So we use computers when we need the functions of a calculator, such as getting the sum of numbers, calculating taxes, or processing numerical data.

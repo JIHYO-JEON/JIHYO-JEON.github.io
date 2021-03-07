@@ -55,10 +55,10 @@ Like this, we humans can process a large amount of information that an image has
 
 
 
-| Tasks | Computer | Human | 
-|:--|--:|--:|
-| **Calculating a lot of numbers**       | easy | takes long |
-| **Understanding images**               | hard | easy |
+| Tasks                                  | Computer | Human  | 
+|:---------------------------------------|:--------:|:------:|
+| **Calculating a lot of numbers**       |   easy   |  hard  |
+| **Understanding images**               |   hard   |  easy  |
 
 
 

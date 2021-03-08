@@ -125,7 +125,7 @@ Fill three inputs of this function (voice_name, text, filename) and run it. Then
 
  If you want to change the file extension, fix the line,
  
- {% highlight ruby linenos %}
+{% highlight ruby linenos %}
 	filename = f"{filename}.wav"
 {% endhighlight %}
 

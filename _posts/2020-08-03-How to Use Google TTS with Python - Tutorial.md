@@ -120,7 +120,7 @@ Fill three inputs of this function (voice_name, text, filename) and run it. Then
 ```python
 
 voice = "en-US-Standard-C"
-Text = "His hope is based on the fact that he is a researcher for a company that has invented a revolutionary new technology. The refrigerator is an example of the type of devices that use this new technology. The refrigerator is not powered by electricity, but rather, it uses a special chemical to cool down."
+Text = "His hope is based on the fact that he is a researcher ..."
 text_to_speech(voice, Text, "VoiceFiles")
 
 ```
@@ -130,6 +130,7 @@ text_to_speech(voice, Text, "VoiceFiles")
 ```python
 
 filename = f"{filename}.wav"
+
 ```
 
 in the text_to_speech function definition.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use Google TTS with Python Tutorial"
+title: "How to Use Google TTS with Python - Tutorial"
 date: 2020-08-03 20:46:00
 tags: [ML paper]
 ---

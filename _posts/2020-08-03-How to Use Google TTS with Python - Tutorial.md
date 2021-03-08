@@ -24,10 +24,10 @@ The environment needs your google application credentials, so it doesn't need to
 ### 3. Environment Setting
 
 {% highlight ruby linenos %}
-	import os  
-	import time  
-	import html  
-	from google.cloud import texttospeech
+import os  
+import time  
+import html  
+from google.cloud import texttospeech
 {% endhighlight %}
 
 If you use the conda environment for setting, install Google Cloud Sdk with the line below,
@@ -35,28 +35,28 @@ If you use the conda environment for setting, install Google Cloud Sdk with the 
 And set the google application credentials.
 
 {% highlight ruby linenos %}
-	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./your_json_file"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./your_json_file"
 {% endhighlight %}
 
 And find the voice you want, with the function below,
 
 {% highlight ruby linenos %}
-	def list_voices():  
-	    """Lists the available voices."""  
-	  client = texttospeech.TextToSpeechClient()  
-	    # Performs the list voices request  
-	  voices = client.list_voices()  
-	    for voice in voices.voices:  
-	        # Display the voice's name. Example: tpc-vocoded  
-	  print(f"Name: {voice.name}")  
-	        # Display the supported language codes for this voice. Example: "en-US"  
-	  for language_code in voice.language_codes:  
-	            print(f"Supported language: {language_code}")  
-	        ssml_gender = texttospeech.SsmlVoiceGender(voice.ssml_gender)  
-	        # Display the SSML Voice Gender  
-	  print(f"SSML Voice Gender: {ssml_gender.name}")  
-	        # Display the natural sample rate hertz for this voice. Example: 24000  
-	  print(f"Natural Sample Rate Hertz: {voice.natural_sample_rate_hertz}\n")
+def list_voices():  
+    """Lists the available voices."""  
+  client = texttospeech.TextToSpeechClient()  
+    # Performs the list voices request  
+  voices = client.list_voices()  
+    for voice in voices.voices:  
+	# Display the voice's name. Example: tpc-vocoded  
+  print(f"Name: {voice.name}")  
+	# Display the supported language codes for this voice. Example: "en-US"  
+  for language_code in voice.language_codes:  
+	    print(f"Supported language: {language_code}")  
+	ssml_gender = texttospeech.SsmlVoiceGender(voice.ssml_gender)  
+	# Display the SSML Voice Gender  
+  print(f"SSML Voice Gender: {ssml_gender.name}")  
+	# Display the natural sample rate hertz for this voice. Example: 24000  
+  print(f"Natural Sample Rate Hertz: {voice.natural_sample_rate_hertz}\n")
 {% endhighlight %}
 
 Here is the sample video of voices that you can see in the voice list. I picked "en-US-Standard-C" which is charismatic female voice.
@@ -92,37 +92,37 @@ Here is the sample video of voices that you can see in the voice list. I picked 
 The easiest way is just creating the 'mp3' or 'wav' file with the function below. There is no extra options in the way TTS reads.
 
 {% highlight ruby linenos %}
-	def text_to_speech(voice_name, text, filename):  
-	    language_code = "-".join(voice_name.split("-")[:2])  
-	    text_input = texttospeech.SynthesisInput(text=text)  
-	    voice_params = texttospeech.VoiceSelectionParams(  
-	        language_code=language_code, name=voice_name  
-	    )  
-	    audio_config = texttospeech.AudioConfig(  
-	        audio_encoding=texttospeech.AudioEncoding.LINEAR16  
-	    )  
-	    client = texttospeech.TextToSpeechClient()  
-	    response = client.synthesize_speech(  
-	        input=text_input, voice=voice_params, audio_config=audio_config  
-	    )  
-	    filename = f"{filename}.wav"
-	  with open(filename, "wb") as out:  
-	        out.write(response.audio_content)  
-	        print(f'Audio content written to "{filename}"'
+def text_to_speech(voice_name, text, filename):  
+    language_code = "-".join(voice_name.split("-")[:2])  
+    text_input = texttospeech.SynthesisInput(text=text)  
+    voice_params = texttospeech.VoiceSelectionParams(  
+	language_code=language_code, name=voice_name  
+    )  
+    audio_config = texttospeech.AudioConfig(  
+	audio_encoding=texttospeech.AudioEncoding.LINEAR16  
+    )  
+    client = texttospeech.TextToSpeechClient()  
+    response = client.synthesize_speech(  
+	input=text_input, voice=voice_params, audio_config=audio_config  
+    )  
+    filename = f"{filename}.wav"
+  with open(filename, "wb") as out:  
+	out.write(response.audio_content)  
+	print(f'Audio content written to "{filename}"'
 {% endhighlight %}
 
 Fill three inputs of this function (voice_name, text, filename) and run it. Then you can see the wav file named 'VoiceFiles.wav'.
 
 {% highlight ruby linenos %}
-	voice = "en-US-Standard-C"
-	Text = "His hope is based on the fact that he is a researcher for a company that has invented a revolutionary new technology. The refrigerator is an example of the type of devices that use this new technology. The refrigerator is not powered by electricity, but rather, it uses a special chemical to cool down."
-	text_to_speech(voice, Text, "VoiceFiles")
+voice = "en-US-Standard-C"
+Text = "His hope is based on the fact that he is a researcher for a company that has invented a revolutionary new technology. The refrigerator is an example of the type of devices that use this new technology. The refrigerator is not powered by electricity, but rather, it uses a special chemical to cool down."
+text_to_speech(voice, Text, "VoiceFiles")
 {% endhighlight %}
 
  If you want to change the file extension, fix the line,
  
 {% highlight ruby linenos %}
-	filename = f"{filename}.wav"
+filename = f"{filename}.wav"
 {% endhighlight %}
 
 in the text_to_speech function definition.

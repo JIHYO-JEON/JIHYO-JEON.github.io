@@ -3,7 +3,7 @@
 layout: post
 title: "How to Use Google TTS with Python Tutorial"
 date: 2020-08-03 20:46:00
-tags: [ML Paper]
+tags: [ML paper]
 ---
 
 ![](https://cdn.aitimes.kr/news/photo/201710/10791_10296_126.png)

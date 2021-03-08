@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to make machine with intelligence?"
+title: "Easy Predictor"
 date: 2020-08-04 20:46:00
 tags: [neural networks]
 ---

@@ -35,7 +35,7 @@ A[3*4+5] --> B((3+3+3+3+5))
 B((3+3+3+3+5)) --> C[17]
 ```
 
-## KRW - USD converter
+# KRW - USD converter
 Let's think of a more complicated machine. If computer is a calculator, it can also calculate won-dollar converter. The exchange rate is fixed at 1,100 won/$1. But, assume we do not know this ratio. (The real ratio is the answer, which is called **ground truth**) We can just imagine that it is a linear relationship.
 
 $dollar = r * won$

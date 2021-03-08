@@ -63,9 +63,6 @@ Here is the sample video of voices that you can see in the voice list. I picked 
 
 [Voice Samples Video](https://www.youtube.com/watch?v=j9b7pNTE_SY)
 
-{% highlight ruby linenos %}
-    # https://www.youtube.com/watch?v=j9b7pNTE_SY  
- 
 	Name: en-GB-Wavenet-A  
 	Supported language: en-GB  
 	SSML Voice Gender: FEMALE  
@@ -89,7 +86,6 @@ Here is the sample video of voices that you can see in the voice list. I picked 
 	.
 	.
 	.
-{% endhighlight %}
 
 ### 4. Create TTS voice file
 

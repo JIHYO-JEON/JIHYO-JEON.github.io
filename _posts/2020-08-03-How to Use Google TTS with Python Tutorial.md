@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "How to Use Google TTS with Python Tutorial"

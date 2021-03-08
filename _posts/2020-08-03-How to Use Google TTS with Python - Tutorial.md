@@ -7,6 +7,10 @@ tags: [ML paper]
 
 ![](https://cdn.aitimes.kr/news/photo/201710/10791_10296_126.png)
 
+WaveNet is a deep generative model for creating raw audio waveforms. The technology was introduced by Google's DeepMind to teach users how to communicate with computers.
+
+In this tutorial, we are going to create voice files with WaveNet and Google Cloud SDK from the text.
+
 **More information:**
 - DeepMind blog post about WaveNet [WaveNet - DeepMind](https://deepmind.com/blog/article/wavenet-generative-model-raw-audio)
 - WaveNet Paper [arxiv](https://arxiv.org/pdf/1609.03499.pdf)

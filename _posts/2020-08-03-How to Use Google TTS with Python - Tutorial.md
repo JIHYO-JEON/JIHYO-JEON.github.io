@@ -40,7 +40,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./your_json_file"
 
 And find the voice you want, with the function below,
 
-{% highlight ruby linenos %}
+```python
 def list_voices():  
     """Lists the available voices."""  
   client = texttospeech.TextToSpeechClient()  
@@ -57,7 +57,7 @@ def list_voices():
   print(f"SSML Voice Gender: {ssml_gender.name}")  
 	# Display the natural sample rate hertz for this voice. Example: 24000  
   print(f"Natural Sample Rate Hertz: {voice.natural_sample_rate_hertz}\n")
-{% endhighlight %}
+```
 
 Here is the sample video of voices that you can see in the voice list. I picked "en-US-Standard-C" which is charismatic female voice.
 

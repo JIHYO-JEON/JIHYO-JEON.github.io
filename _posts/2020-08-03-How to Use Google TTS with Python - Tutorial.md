@@ -23,19 +23,24 @@ The environment needs your google application credentials, so it doesn't need to
 
 ### 3. Environment Setting
 
+{% highlight ruby linenos %}
 	import os  
 	import time  
 	import html  
 	from google.cloud import texttospeech
+{% endhighlight %}
 
 If you use the conda environment for setting, install Google Cloud Sdk with the line below,
 		`conda install -c conda-forge google-cloud-sdk`
 And set the google application credentials.
 
+{% highlight ruby linenos %}
 	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./your_json_file"
+{% endhighlight %}
 
 And find the voice you want, with the function below,
 
+{% highlight ruby linenos %}
 	def list_voices():  
 	    """Lists the available voices."""  
 	  client = texttospeech.TextToSpeechClient()  
@@ -52,11 +57,13 @@ And find the voice you want, with the function below,
 	  print(f"SSML Voice Gender: {ssml_gender.name}")  
 	        # Display the natural sample rate hertz for this voice. Example: 24000  
 	  print(f"Natural Sample Rate Hertz: {voice.natural_sample_rate_hertz}\n")
+{% endhighlight %}
 
 Here is the sample video of voices that you can see in the voice list. I picked "en-US-Standard-C" which is charismatic female voice.
 
 [Voice Samples Video](https://www.youtube.com/watch?v=j9b7pNTE_SY)
 
+{% highlight ruby linenos %}
     # https://www.youtube.com/watch?v=j9b7pNTE_SY  
  
 	Name: en-GB-Wavenet-A  
@@ -82,11 +89,13 @@ Here is the sample video of voices that you can see in the voice list. I picked 
 	.
 	.
 	.
+{% endhighlight %}
 
 ### 4. Create TTS voice file
 
 The easiest way is just creating the 'mp3' or 'wav' file with the function below. There is no extra options in the way TTS reads.
 
+{% highlight ruby linenos %}
 	def text_to_speech(voice_name, text, filename):  
 	    language_code = "-".join(voice_name.split("-")[:2])  
 	    text_input = texttospeech.SynthesisInput(text=text)  
@@ -104,16 +113,21 @@ The easiest way is just creating the 'mp3' or 'wav' file with the function below
 	  with open(filename, "wb") as out:  
 	        out.write(response.audio_content)  
 	        print(f'Audio content written to "{filename}"'
+{% endhighlight %}
 
 Fill three inputs of this function (voice_name, text, filename) and run it. Then you can see the wav file named 'VoiceFiles.wav'.
 
+{% highlight ruby linenos %}
 	voice = "en-US-Standard-C"
 	Text = "His hope is based on the fact that he is a researcher for a company that has invented a revolutionary new technology. The refrigerator is an example of the type of devices that use this new technology. The refrigerator is not powered by electricity, but rather, it uses a special chemical to cool down."
 	text_to_speech(voice, Text, "VoiceFiles")
-	
+{% endhighlight %}
+
  If you want to change the file extension, fix the line,
  
+ {% highlight ruby linenos %}
 	filename = f"{filename}.wav"
+{% endhighlight %}
 
 in the text_to_speech function definition.
 	

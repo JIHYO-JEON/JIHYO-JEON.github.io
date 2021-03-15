@@ -2,7 +2,7 @@
 layout: post
 title: "Big-O notation"
 date: 2020-08-06 20:46:00
-tags: [CS]
+tags: [Computer Science]
 ---
 
 # Big-O Notation
